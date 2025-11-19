@@ -3,36 +3,36 @@ Jeopardy-PES (Terminal-Based Game)
 A terminal-based interactive Jeopardy-style quiz game written in C.
 This project uses queues for player management, timed questions, category-based gameplay, and supports multiple players.
 
-Features
+## Features
 
-    Multi-player Support
+Multi-player Support
 
-Players enter their names and join a queue system.
+    Players enter their names and join a queue system.
 
-    Categories
+Categories
 
-Players select categories (General, Science, Tech, Movies, Sports).
+    Players select categories (General, Science, Tech, Movies, Sports).
 
-    Timed Questions
+Timed Questions
 
-Each player must answer within a time limit using alarm() and signals.
+    Each player must answer within a time limit using alarm() and signals.
 
-    Score Tracking
+Score Tracking
 
-Correct answers add points, wrong answers deduct points.
+    Correct answers add points, wrong answers deduct points.
 
-    Winner Announcement
+Winner Announcement
+     
+    After all questions are completed, the player with the highest score is announced.
 
-After all questions are completed, the player with the highest score is announced.
-
-    Modular Code Structure
+Modular Code Structure
 	     •	main.c → Game flow and UI
 	     •	jeopardy.c → Core logic (questions, player queue, scoring)
 	     •	jeopardy.h → Structs, macros, and function declarations
 
 
 
-Project Structure
+## Project Structure
     Jeopardy-PES/
     │
     ├── main.c          # Main game loop, player input, menus
@@ -42,17 +42,22 @@ Project Structure
 
 
 
-How to Compile
+
+## How to Compile
 
 Use GCC:
-     gcc main.c jeopardy.c -o jeopardy
+
+```bash
+    gcc main.c jeopardy.c -o jeopardy
+```
 
 Run the game:
-     ./jeopardy
 
+```bash
+    ./jeopardy
+```
 
-
-How to Play
+## How to Play
 	1.	Enter number of players
 	2.	Enter their names
 	3.	Each player selects a category
@@ -61,9 +66,9 @@ How to Play
 	6.	After all rounds, the winner is displayed
 
 
-Dependencies
+## Dependencies
 
-This game uses only standard C libraries:
+    This game uses only standard C libraries:
 	•	stdio.h
 	•	stdlib.h
 	•	string.h
@@ -71,4 +76,5 @@ This game uses only standard C libraries:
 	•	signal.h
 
 No external libraries required.
+
   
